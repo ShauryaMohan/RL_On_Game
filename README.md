@@ -34,12 +34,20 @@ These flags are optional and can be used to change the default values, for examp
 ```
 python Train.py model_2 -gh 12 -s 40 -lr 0.1 -d 0.8
 ```
+  
+On training you will observe the following lines on command line (for without animation) this will give you stats of your game and you can check if it is training or not:  
+> Stats between game 400 and 500  
+> Average Score : 0.37 Highest Score : 4  
+> Stats between game 500 and 600  
+> Average Score : 0.67 Highest Score : 6  
+
 ### Training with animation
 You can also train your model and observe the training (long process) using the optional argument -ani or --animate, this is shown as follows:
 ```
 python Train.py <a-name-for-the-model> -ani -gh 10
 ```
 This will train your model with 10 ghosts and animation on, that is you can watch the pacman being trained. This is not recommended if you don't have lot of time, but is interesting to understand how the pacman is learning.  
+  
 If you forget the arguments or want to see how to use them you can always type the following command to get help on how to use. 
 ```
 python Train.py -h
