@@ -10,6 +10,7 @@ import torch
 
 parser = argparse.ArgumentParser(prog='Play.py',usage='%(prog)s File_name [options]',description='Get the configuration for training')
 parser.add_argument('File_name', metavar='',help="Enter the model name you want to play")
+parser.add_argument('-t','--time', type=int, metavar='',help="Enter the time between frames in ms")
 args = parser.parse_args()
 
 
@@ -60,8 +61,8 @@ def main_loop(*args):
         print("Score : " + str(score))
     
     
-
-ani = animation.FuncAnimation(fig,main_loop,interval=40)
+time = args.time if(args.time) else 40
+ani = animation.FuncAnimation(fig,main_loop,interval=time)
 
 plt.show()
 
